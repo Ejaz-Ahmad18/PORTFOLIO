@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Main Container */
+footer {
+    height: 12vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.Footer-h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #0ef;
+}
+
+.Footer-p {
+    font-size: 1.05rem;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .Footer-h1 {
+        font-size: 1.3rem;
+    }
+
+    .Footer-p {
+        font-size: 0.95rem;
+    }
+}

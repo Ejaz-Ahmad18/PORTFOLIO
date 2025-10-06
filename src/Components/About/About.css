@@ -1,0 +1,88 @@
+/* About.css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.About-Cont {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.h-1 {
+  color: #0ef;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+}
+
+.card-1 {
+  background-color: transparent;
+  margin: 20px auto;
+  border: 1px solid #0ef;
+  height: 55vh;
+  width: 9vw;
+  position: absolute;
+  top: 32%;
+  left: 79%;
+  border-radius: 8px;
+}
+
+.card-2 {
+  height: 65vh;
+  width: 25vw;
+  border-radius: 8px;
+  position: absolute;
+  top: 25%;
+  left: 56%;
+  z-index: 1;
+  background-color: #0ef;
+}
+
+.front-img1 {
+  height: 65vh;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px #0ef(0, 153, 255, 0.4),
+              0 0 15px #0ef(0, 153, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.front-img1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px #0ef(0, 153, 255, 0.6),
+              0 0 25px #0ef(0, 153, 255, 0.9);
+}
+
+.firstcard {
+  position: absolute;
+  top: 30%;
+  left: 18%;
+  color: #FDFEFF;
+  background-color: rgba(19, 57, 132, 0.141);
+  height: 55vh;
+  width: 38vw;
+  border-radius: 10px;
+  padding: 15px;
+  font-family: "Nunito", sans-serif;
+  border: 1px solid #0ef;
+}
+
+.firstcard .h-3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.firstcard .p-0,
+.firstcard .p-1 {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
