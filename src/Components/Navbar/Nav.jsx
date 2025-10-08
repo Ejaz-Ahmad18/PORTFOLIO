@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Nav.css';
+import { FaGithub } from "react-icons/fa6";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +21,10 @@ function Navbar() {
     <a href="/projects" style={{ "--i": 4 }}>Projects</a>
     <a href="/contacts" style={{ "--i": 5 }}>Contacts</a> 
     </ul>
-     <div>
-          <button className="nav-btn">Github</button>
+     <div className="nav-btn">
+          {/* <  button className="nav-btn">Github</button> */}
+           <a href="https://github.com/Ejaz-Ahmad18" target="_blank" rel="noopener noreferrer" className="git-btn" ><FaGithub/>  Github</a>
+          
         </div>
 </nav>
 

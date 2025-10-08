@@ -19,7 +19,7 @@
 }
 
 .proj-p {
-  color: #fff;
+  color: #fff !important;
   font-size: 1.2rem;
   margin-bottom: 3rem;
 }

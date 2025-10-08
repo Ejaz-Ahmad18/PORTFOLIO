@@ -36,7 +36,17 @@ function Home() {
                     <a href="" style={{ "--i": 6 }}><CiFacebook /></a>
                     <a href="" style={{ "--i": 7 }}><FaInstagram /></a>
                     <a href="" style={{ "--i": 8 }}><FaWhatsapp /></a>
-                    <a href="" style={{ "--i": 9 }}><CiLinkedin /></a>
+                    {/* <a href="https://www.linkedin.com/in/ejaz-ahmad-1599112b9/" style={{ "--i": 9 }}><CiLinkedin /></a> */}
+                    <a
+                        href="https://www.linkedin.com/in/ejaz-ahmad-1599112b9/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ "--i": 9 }}
+                    >
+                        <CiLinkedin />
+                    </a>
+
+
                 </div>
                 <a href="#" className="btn-box"> Resume </a>
             </div>

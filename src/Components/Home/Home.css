@@ -19,6 +19,7 @@
 .home-content{
     max-width: 600px;
     margin-left: 12%;
+    color: #fff;
 }
 .home-content h3{
     font-size: 32px;
@@ -104,7 +105,7 @@ margin: -3px 0;
 .bg-dot {
   width: 8px;
   height: 8px;
-  background: #0099ff;
+  background: cyan;
   border-radius: 50%;
    box-shadow: 0 12px cyan, 12px 0 cyan, 12px 12px cyan,
                 24px 0 cyan, 24px 12px cyan, 0 24px cyan,
@@ -123,7 +124,7 @@ margin: -3px 0;
 }
 
 .bg-star {
-  color: #0099ff;
+  color: cyan;
   font-size: 24px;
   opacity: 0.9;
   animation: twinkle 2s infinite alternate;
