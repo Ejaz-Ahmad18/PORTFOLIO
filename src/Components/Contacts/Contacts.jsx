@@ -51,10 +51,10 @@ function Contacts() {
         </div>
 
         <div className="social-btns">
-       <a href="" style={{ "--i": 6 }}><CiFacebook /></a>
-                           <a href="" style={{ "--i": 7 }}><FaInstagram /></a>
-                           <a href="" style={{ "--i": 8 }}><FaWhatsapp /></a>
-                           <a href="" style={{ "--i": 9 }}><CiLinkedin /></a>
+        <a href="" style={{ "--i": 6 }}><CiFacebook /></a>
+        <a href="" style={{ "--i": 7 }}><FaInstagram /></a>
+        <a href="" style={{ "--i": 8 }}><FaWhatsapp /></a>
+        <a href="" style={{ "--i": 9 }}><CiLinkedin /></a>
         </div>
       </div>
     </div>

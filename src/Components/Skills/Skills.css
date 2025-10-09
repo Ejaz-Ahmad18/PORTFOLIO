@@ -11,6 +11,7 @@
   text-align: center;
   /* padding: 60px 20px; */
   overflow: hidden;
+ 
 }
 
 .Skill-h1 {
@@ -23,7 +24,7 @@
 
 .Skill-p {
   margin-bottom: 50px;
-  font-size: 18px;
+  font-size: 14px;
   color: #fff;
 }
 
@@ -31,6 +32,7 @@
 .Skill-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+ padding: 0 100px;
   
   gap: 30px;
   justify-items: center;
@@ -39,7 +41,7 @@
 .Skill-card {
   background-color:rgba(0, 255, 255, 0.296);
   border-radius: 12px;
-  width: 50%;
+  width: 65%;
   height: 22vh;
   font-size: 22px;
   color: white;
