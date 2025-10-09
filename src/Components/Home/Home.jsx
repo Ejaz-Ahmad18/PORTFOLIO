@@ -33,9 +33,9 @@ function Home() {
                 <p>I'm a web Designer with extensive experience for over 3 years.</p>
 
                 <div className="home-social">
-                    <a href="" style={{ "--i": 6 }}><CiFacebook /></a>
-                    <a href="" style={{ "--i": 7 }}><FaInstagram /></a>
-                    <a href="" style={{ "--i": 8 }}><FaWhatsapp /></a>
+                    <a href="" style={{ "--i": 7 }}><CiFacebook /></a>
+                    <a href="" style={{ "--i": 8 }}><FaInstagram /></a>
+                    <a href="" style={{ "--i": 9 }}><FaWhatsapp /></a>
                     {/* <a href="https://www.linkedin.com/in/ejaz-ahmad-1599112b9/" style={{ "--i": 9 }}><CiLinkedin /></a> */}
                     <a
                         href="https://www.linkedin.com/in/ejaz-ahmad-1599112b9/"

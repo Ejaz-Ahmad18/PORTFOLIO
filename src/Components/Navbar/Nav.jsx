@@ -19,7 +19,8 @@ function Navbar() {
     <a href="/about" style={{ "--i": 2 }}>About</a>
     <a href="/skills" style={{ "--i": 3 }}>Skills</a>
     <a href="/projects" style={{ "--i": 4 }}>Projects</a>
-    <a href="/contacts" style={{ "--i": 5 }}>Contacts</a> 
+    <a href="/educations" style={{ "--i": 5 }}>Educations</a>
+    <a href="/contacts" style={{ "--i": 6}}>Contacts</a> 
     </ul>
      <div className="nav-btn">
           {/* <  button className="nav-btn">Github</button> */}
