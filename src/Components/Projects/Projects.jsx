@@ -1,99 +1,104 @@
-import React, { useState } from "react";
+import React from "react";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import "./Projects.css";
-import ejaz from "../../Assets/Project-1.png";
-import ejaz1 from "../../Assets/Project-2.png";
-import ejaz2 from "../../Assets/Project-3.png";
-import ejaz3 from "../../Assets/Project-4.png";
 
-function Projects() {
-  const [popup, setPopup] = useState(null);
-
+function Projects (){
   const projects = [
     {
-      id: 1,
-      image: ejaz,
-      title: "Project 1",
-      tech: "HTML, CSS, React",
-      desc: "Modern responsive website with smooth animations and reusable React components.",
-      demo: "https://your-demo-link-1.com",
-      github: "https://github.com/your-repo-1",
+      title: "E-Commerce Platform",
+      description:
+        "A modern e-commerce platform built with React, featuring real-time inventory management and seamless checkout experience.",
+      image:
+        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+      tags: ["React", "TypeScript", "Styled Components"],
+      github: "#",
+      demo: "#",
     },
     {
-      id: 2,
-      image: ejaz1,
-      title: "Project 2",
-      tech: "HTML, CSS, React",
-      desc: "Interactive UI project with advanced React hooks and state management.",
-      demo: "https://your-demo-link-2.com",
-      github: "https://github.com/your-repo-2",
+      title: "Task Management App",
+      description:
+        "Collaborative task management app with drag-and-drop functionality and real-time updates.",
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+      tags: ["React", "Redux", "Node.js"],
+      github: "#",
+      demo: "#",
     },
     {
-      id: 3,
-      image: ejaz2,
-      title: "Project 3",
-      tech: "HTML, CSS, React",
-      desc: "Single-page application with smooth navigation and reusable components.",
-      demo: "https://your-demo-link-3.com",
-      github: "https://github.com/your-repo-3",
+      title: "Weather Dashboard",
+      description:
+        "Beautiful weather dashboard with real-time data visualization and location-based forecasts.",
+      image:
+        "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop",
+      tags: ["React", "API Integration", "Charts"],
+      github: "#",
+      demo: "#",
     },
     {
-      id: 4,
-      image: ejaz3,
-      title: "Project 4",
-      tech: "HTML, CSS, React",
-      desc: "Portfolio project showing responsive design, animations, and API integration.",
-      demo: "https://your-demo-link-4.com",
-      github: "https://github.com/your-repo-4",
+      title: "Portfolio CMS",
+      description:
+        "Content management system for creating and managing portfolio websites with ease.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      tags: ["React", "Firebase", "Material UI"],
+      github: "#",
+      demo: "#",
     },
   ];
 
   return (
-    <div className="Pro-Cont">
-      <h1 className="proj-h1">PROJECTS</h1>
-      <p className="proj-p">
-        Here i have creating & developing some of them here.
-      </p>
-
-      <div className="proj-cards-wrapper">
-        {projects.map((proj, index) => (
-          <div
-            key={index}
-            className={`proj-card proj-card${index + 1}`}
-            onClick={() => setPopup(proj)}
-          >
-            <img src={proj.image} alt={proj.title} />
-            <h3>{proj.title}</h3>
-            <p>{proj.tech}</p>
-          </div>
-        ))}
-      </div>
-
-      {popup && (
-        <div className="proj-popup" onClick={() => setPopup(null)}>
-          <div
-            className="proj-popup-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img src={popup.image} alt={popup.title} />
-            <h2>{popup.title}</h2>
-            <p className="proj-desc">{popup.desc}</p>
-            <p className="proj-tech">
-              <strong>Tech:</strong> {popup.tech}
-            </p>
-            <div className="proj-links">
-              <a href={popup.demo} target="_blank" rel="noopener noreferrer">
-                🔗 Live Demo
-              </a>
-              <a href={popup.github} target="_blank" rel="noopener noreferrer">
-                💻 GitHub
-              </a>
-            </div>
-            <button onClick={() => setPopup(null)}>x</button>
-          </div>
+    <section id="projects" className="projects-section">
+      <div className="projects-container">
+        <div className="projects-header">
+          <h2 className="projects-title">Projects</h2>
+          <p className="projects-subtitle">Some of my recent work</p>
         </div>
-      )}
-    </div>
+
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div key={index} className="project-card">
+              <div className="project-image-wrapper">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                />
+                <div className="project-overlay">
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-btn gradient-btn"
+                  >
+                    <FaExternalLinkAlt /> Demo
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-btn outline-btn"
+                  >
+                    <FaGithub /> Code
+                  </a>
+                </div>
+              </div>
+              <div className="project-content">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="project-tags">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span key={tagIndex} className="project-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
-}
+};
 
 export default Projects;

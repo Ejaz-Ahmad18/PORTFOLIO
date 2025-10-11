@@ -2,9 +2,5 @@
      padding: 0;
      margin: 0;
      box-sizing: border-box;
-}
-body{
-     font-family: 'poppins', sans-serif;
-     /* background-color: #05274a ; */
-     background-color: #173549;
+      font-family: 'poppins', sans-serif;
 }

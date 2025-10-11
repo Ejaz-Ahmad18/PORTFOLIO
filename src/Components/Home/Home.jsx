@@ -1,57 +1,51 @@
-import React, { useEffect } from "react";
-import './Home.css';
-import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
-import { CiFacebook, CiLinkedin } from "react-icons/ci";
-import Typed from "typed.js";
+import React from "react";
+import "./Home.css";
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FiArrowDown } from "react-icons/fi";
 
-function Home() {
+const Home = () => {
+  return (
+    <section id="home" className="home">
+      {/* Background orbs */}
+      <div className="orb orb1"></div>
+      <div className="orb orb2"></div>
 
+      <div className="content">
+        <p className="intro">Hello, I'm</p>
+        <h1 className="name">Ejaz Ahmad</h1>
+        <p className="role">Frontend Developer</p>
 
-    useEffect(() => {
-        const typed = new Typed(".text", {
-            strings: ["Frontend Developer", "Designer", "Web Developer"],
-            typeSpeed: 100,
-            backSpeed: 100,
-            backDelay: 1000,
-            loop: true,
-        });
+        <p className="description">
+          Crafting seamless digital experiences with clean code and pixel-perfect designs.
+          Specializing in React and React Native with 3+ years of experience.
+        </p>
 
-        return () => typed.destroy();
-    }, []);
-
-    return (
-        <div className="home">
-            <span className="bg-dot dot1"></span>
-            <span className="bg-dot dot2"></span>
-            <span className="bg-star star1">✦</span>
-            <span className="bg-star star2">✦</span>
-
-            <div className="home-content">
-                <h3>Hello, It's Me</h3>
-                <h1>Ejaz Ahmad</h1>
-                <h3>And I'm a <span className="text"></span> </h3>
-                <p>I'm a web Designer with extensive experience for over 3 years.</p>
-
-                <div className="home-social">
-                    <a href="" style={{ "--i": 7 }}><CiFacebook /></a>
-                    <a href="" style={{ "--i": 8 }}><FaInstagram /></a>
-                    <a href="" style={{ "--i": 9 }}><FaWhatsapp /></a>
-                    {/* <a href="https://www.linkedin.com/in/ejaz-ahmad-1599112b9/" style={{ "--i": 9 }}><CiLinkedin /></a> */}
-                    <a
-                        href="https://www.linkedin.com/in/ejaz-ahmad-1599112b9/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ "--i": 9 }}
-                    >
-                        <CiLinkedin />
-                    </a>
-
-
-                </div>
-                <a href="#" className="btn-box"> Resume </a>
-            </div>
+        <div className="buttons">
+          <a href="/contact" className="btn primary">Get in Touch</a>
+          <a href="/projects" className="btn secondary">View Projects</a>
         </div>
-    );
-}
+
+        <div className="socials">
+          <a href="https://github.com/ejaz18" target="_blank" rel="noreferrer">
+            <FaGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/ejaz-ahmad-74a002298/" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://www.instagram.com/its_ejaj.18/" target="_blank" rel="noreferrer">
+            <FaTwitter />
+          </a>
+          <a href="mailto:ejaj101112@gmail.com">
+            <FaEnvelope />
+          </a>
+        </div>
+
+        <a href="/about" className="scroll-down">
+          <FiArrowDown />
+        </a>
+      </div>
+    </section>
+  );
+};
 
 export default Home;

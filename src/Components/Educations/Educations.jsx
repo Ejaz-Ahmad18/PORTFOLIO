@@ -1,41 +1,54 @@
-import React from 'react';
-import { FaBriefcase } from "react-icons/fa";
-import './Educations.css';
+import React from "react";
+import "./Educations.css";
+import { FaGraduationCap } from "react-icons/fa";
 
-function Educations() {
-    return (
-        <div className="Edu-Cont">
-            <h1 className='Edu-h'>EDUCATION</h1>
+function Education() {
+  const educationData = [
+    {
+      title: "Marwari Inter College, Katihar, Bihar",
+      degree: "ISC (XII), Science with Maths",
+      duration: "Apr 2020 - Apr 2021",
+      grade: "Grade: 62%",
+      description:
+        "I completed my class 12 high school education at Marwari Inter College, Katihar, where I studied Science with Maths.",
+    },
+    {
+      title: "Dev Bhoomi Uttarakhand University, Dehradun",
+      degree: "Bachelor of Computer Applications (BCA)",
+      duration: "Apr 2021 - Apr 2024",
+      grade: "Grade: 70%",
+      description:
+        "I have completed BCA with a focus on Front-end web development, gaining practical skills in designing and developing user-friendly web interfaces. I am eager to apply my knowledge in building engaging applications.",
+    },
+  ];
 
-            <div className="timeline">
+  return (
+    <section id="education" className="education-section">
+      <h2 className="education-title gradient-text">Education</h2>
 
-                {/* Left timeline item */}
-                <div className="timeline-item left">
-                    <div className="icon-1"><FaBriefcase /></div>
-                    <div className="content-1">
-                        <h3>Marwari Inter College, Katihar, Bihar</h3>
-                        <p>ISC (XII), Science with Maths</p>
-                        <p>Apr 2020 - Apr 2021</p>
-                        <p>Grade: 62%</p>
-                        <p>I completed my class 12 high school education at Marwari Inter College, Katihar, where I studied Science with Maths.</p>
-                    </div>
-                </div>
-
-                {/* Right timeline item */}
-                <div className="timeline-item right">
-                    <div className="icon-2"><FaBriefcase /></div>
-                    <div className="content-2">
-                        <h3>Dev Bhoomi Uttarakhand University, Dehradun</h3>
-                        <p>Bachelor of Computer Applications (BCA)</p>
-                        <p>Apr 2021 - Apr 2024</p>
-                        <p>Grade: 70%</p>
-                        <p>I have completed BCA with a focus on Front-end web development, gaining practical skills in designing and developing user-friendly web interfaces. I am eager to apply my knowledge in building engaging applications.</p>
-                    </div>
-                </div>
-
+      <div className="timeline">
+        {educationData.map((edu, index) => (
+          <div
+            key={index}
+            className={`timeline-item ${
+              index % 2 === 0 ? "left" : "right"
+            }`}
+          >
+            <div className="timeline-icon">
+              <FaGraduationCap size={20} />
             </div>
-        </div>
-    );
+            <div className="timeline-content glass-card">
+              <h3>{edu.title}</h3>
+              <p className="degree">{edu.degree}</p>
+              <p className="duration">{edu.duration}</p>
+              <p className="grade">{edu.grade}</p>
+              <p className="description">{edu.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
-export default Educations;
+export default Education;

@@ -1,53 +1,69 @@
 import React from "react";
-import {
-  FaCss3Alt,
-  FaGithubSquare,
-  FaGitSquare,
-  FaHtml5,
-  FaReact,
-} from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
 import "./Skills.css";
+import { FaFigma, FaGitAlt, FaGithub, FaHtml5, FaJs, FaReact } from "react-icons/fa";
+import { SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
+import { DiVisualstudio } from "react-icons/di";;
 
+function Skills (){
+  const skillCategories = [
+    {
+      category: "Frontend",
+      skills: [
+        { name: "React", level: 90, icon: <FaReact /> },
+        { name: "React Native", level: 85, icon: <FaReact /> },
+        { name: "JavaScript", level: 88, icon: <FaJs /> },
+        { name: "TypeScript", level: 80, icon: <SiTypescript /> },
+        { name: "HTML/CSS", level: 95, icon: <FaHtml5 /> },
+        { name: "Tailwind CSS", level: 90, icon: <SiTailwindcss /> },
+      ],
+    },
+    {
+      category: "Tools & Platforms",
+      skills: [
+        { name: "Git", level: 85, icon: <FaGitAlt /> },
+        { name: "GitHub", level: 85, icon: <FaGithub /> },
+        { name: "VS Code", level: 90, icon: <DiVisualstudio /> },
+        { name: "Figma", level: 75, icon: <FaFigma /> },
+        { name: "Vite", level: 80, icon: <SiVite /> },
+      ],
+    },
+  ];
 
-function Skills() {
   return (
-    <div className="Skill-Cont">
-      <h1 className="Skill-h1">SKILLS</h1>
-      <p className="Skill-p">
-        Below are some of the skills I have been developing over the last three
-        years.
-      </p>
+    <section id="skills" className="skills-section">
+      <div className="skills-container">
+        <div className="skills-header">
+          <h2 className="skills-title">Skills</h2>
+          <p className="skills-subtitle">Technologies I've been working with</p>
+        </div>
 
-      <div className="Skill-grid">
-        <div className="Skill-card html">
-          <FaHtml5 className="icon" />
-          <h3>HTML</h3>
-        </div>
-        <div className="Skill-card css">
-          <FaCss3Alt className="icon" />
-          <h3>CSS</h3>
-        </div>
-        <div className="Skill-card js">
-          <IoLogoJavascript className="icon" />
-          <h3>JavaScript</h3>
-        </div>
-        <div className="Skill-card react">
-          <FaReact className="icon" />
-          <h3>React</h3>
-        </div>
-        <div className="Skill-card git">
-          <FaGitSquare className="icon" />
-          <h3>Git</h3>
-        </div>
-        <div className="Skill-card github">
-          <FaGithubSquare className="icon" />
-          <h3>GitHub</h3>
+        <div className="skills-grid">
+          {skillCategories.map((category, idx) => (
+            <div className="skills-card" key={idx}>
+              <h3 className="skills-category">{category.category}</h3>
+              <div className="skills-list">
+                {category.skills.map((skill, i) => (
+                  <div key={i} className="skill-item">
+                    <div className="skill-header">
+                      <span className="skill-icon">{skill.icon}</span>
+                      <span className="skill-name">{skill.name}</span>
+                      <span className="skill-level">{skill.level}%</span>
+                    </div>
+                    <div className="skill-bar">
+                      <div
+                        className="skill-progress"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-     
-    </div>
+    </section>
   );
-}
+};
 
 export default Skills;

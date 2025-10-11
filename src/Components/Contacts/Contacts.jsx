@@ -1,64 +1,93 @@
 import React from "react";
-import { MdCall, MdLocationOn, MdMail } from "react-icons/md";
-import "./Contacts.css";
-import { CiFacebook, CiLinkedin } from "react-icons/ci";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import "./Contacts.css"; // ← custom CSS file
 
-function Contacts() {
+function Contact () {
+  const contactInfo = [
+    {
+      icon: <FaEnvelope />,
+      label: "Email",
+      value: "ejaj101112@gmail.com",
+      href: "mailto:ejaj101112@gmail.com",
+    },
+    {
+      icon: <FaPhoneAlt />,
+      label: "Phone",
+      value: "+91 7488155876",
+      href: "tel:+917488155876",
+    },
+    {
+      icon: <FaMapMarkerAlt />,
+      label: "Location",
+      value: "Katihar, Bihar, India",
+      href: "#",
+    },
+  ];
+
+  const socialLinks = [
+    {
+      icon: <FaGithub />,
+      label: "GitHub",
+      href: "https://github.com/ejaz18",
+    },
+    {
+      icon: <FaLinkedin />,
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/ejaz-ahmad-74a002298/",
+    },
+    {
+      icon: <FaInstagram />,
+      label: "Instagram",
+      href: "https://www.instagram.com/its_ejaj.18/",
+    },
+  ];
+
   return (
-    <div className="Contact-Cont">
-      <h2 className="cont-h2">CONTACT ME</h2>
-
-      {/* Contact Form */}
-      <div className="cont-form">
-        <h3 className="form-h">Just Say Hello</h3>
-        <input type="text" placeholder="Your Name" />
-        <input type="text" placeholder="Your Email" />
-        <input type="text" placeholder="Your Subject" />
-        <textarea className="txt-msg" placeholder="Your Message"></textarea>
-        <button className="cont-btn">Send Message</button>
-      </div>
-
-      {/* Contact Info */}
-      <div className="cont-card">
-        <h3 className="card-h">Contact Info</h3>
-        <p className="card-p">
-          Get in touch by phone, email, or in person—I’d love to hear from you!
-        </p>
-
-        <div className="info-item">
-          <MdMail className="icon" />
-          <div>
-            <span>Email</span>
-            <p className="mail">ejazahmad@gmail.com</p>
-          </div>
+    <section id="contact" className="contact-section">
+      <div className="container">
+        <div className="section-header">
+          <h2 className="section-title gradient-text">Get in Touch</h2>
+          <p className="section-subtitle">Let's work together on your next project</p>
         </div>
 
-        <div className="info-item">
-          <MdCall className="icon" />
-          <div>
-            <span>Phone</span>
-            <p>+91 8877372425</p>
+        <div className="contact-card">
+          <div className="contact-info">
+            {contactInfo.map((info, index) => (
+              <a key={index} href={info.href} className="info-item">
+                <div className="info-icon">{info.icon}</div>
+                <div>
+                  <p className="info-label">{info.label}</p>
+                  <p className="info-value">{info.value}</p>
+                </div>
+              </a>
+            ))}
           </div>
-        </div>
 
-        <div className="info-item">
-          <MdLocationOn className="icon" />
-          <div>
-            <span>Address</span>
-            <p>Visit my social profile and get connected</p>
+          <div className="contact-message">
+            <p>
+              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </p>
+            <a href="mailto:ejaj101112@gmail.com" className="contact-btn">Send Me an Email</a>
           </div>
-        </div>
 
-        <div className="social-btns">
-        <a href="" style={{ "--i": 6 }}><CiFacebook /></a>
-        <a href="" style={{ "--i": 7 }}><FaInstagram /></a>
-        <a href="" style={{ "--i": 8 }}><FaWhatsapp /></a>
-        <a href="" style={{ "--i": 9 }}><CiLinkedin /></a>
+          <div className="social-links">
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+                aria-label={social.label}
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
-export default Contacts;
+export default Contact
