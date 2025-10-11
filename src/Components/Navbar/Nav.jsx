@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import "./nav.css";
+import "./Nav.css";
 
 const navLinks = [
   { name: "Home", href: "/" },

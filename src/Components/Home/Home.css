@@ -1,7 +1,7 @@
 .home {
   position: relative;
   min-height: 100vh;
-  background: radial-gradient(circle at center, #0a0b1e, #020311);
+  background: radial-gradient(circle at center, #070818, #01010b);
   color: #fff;
   display: flex;
   justify-content: center;
@@ -10,63 +10,79 @@
   overflow: hidden;
 }
 
-/* Orbs */
+/* Particles canvas */
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Orbs with glowing aura */
 .orb {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
-  filter: blur(150px);
-  opacity: 0.4;
-  animation: float 8s ease-in-out infinite;
+  filter: blur(180px);
+  opacity: 0.5;
+  z-index: 1;
 }
 
 .orb1 {
   background: #a855f7;
-  top: 15%;
-  left: 20%;
+  top: 10%;
+  left: 15%;
 }
 
 .orb2 {
   background: #8d6779;
-  bottom: 15%;
-  right: 20%;
-  animation-delay: 3s;
+  bottom: 10%;
+  right: 15%;
 }
 
 /* Text and layout */
 .content {
   position: relative;
-  z-index: 2;
-  max-width: 800px;
+  z-index: 5;
+  max-width: 850px;
   padding: 0 20px;
-  margin-top: 70px;
 }
 
 .intro {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: #bbb;
+  letter-spacing: 2px;
 }
 
 .name {
-  font-size: 4rem;
+  font-size: 4.5rem;
   background: linear-gradient(90deg, #a855f7, #8d6779);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 20px rgba(168,85,247,0.4); }
+  to { text-shadow: 0 0 40px rgba(168,85,247,1); }
 }
 
 .role {
-  font-size: 2rem;
-  margin-top: 0.5rem;
-  color: #e0e0e0;
+  font-size: 1.8rem;
+  color: #dcdcdc;
+  margin-top: 0.4rem;
 }
 
 .description {
+  font-size: 1.05rem;
+  color: #bdbdbd;
+  line-height: 1.8;
   margin: 1.5rem auto;
   max-width: 600px;
-  font-size: 1rem;
-  color: #bdbdbd;
-  line-height: 1.6;
 }
 
 /* Buttons */
@@ -78,22 +94,22 @@
 }
 
 .btn {
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(168,85,247,0.3);
 }
 
 .btn.primary {
   color: white;
-  border: 2px solid transparent;
   background: linear-gradient(90deg, #a855f7, #8d6779);
 }
 
 .btn.primary:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 0 25px rgba(168,85,247,0.6);
 }
 
 .btn.secondary {
@@ -103,8 +119,8 @@
 }
 
 .btn.secondary:hover {
-  background: rgba(168, 85, 247, 0.1);
-  transform: translateY(-2px);
+  background: rgba(168,85,247,0.1);
+  transform: scale(1.05) translateY(-3px);
 }
 
 /* Social icons */
@@ -112,36 +128,24 @@
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  font-size: 1.5rem;
-  margin-top: 2rem;
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
 }
 
 .socials a {
   color: #bdbdbd;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .socials a:hover {
   color: #a855f7;
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 /* Scroll arrow */
 .scroll-down {
   display: inline-block;
   margin-top: 3rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #a855f7;
-  animation: pulse 1.5s infinite;
-}
-
-/* Animations */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-30px); }
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 0.4; transform: translateY(0); }
-  50% { opacity: 1; transform: translateY(8px); }
 }
