@@ -1,57 +1,94 @@
-import React, { useEffect } from "react";
-import './Home.css';
-import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
-import { CiFacebook, CiLinkedin } from "react-icons/ci";
-import Typed from "typed.js";
+import React from "react";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FiArrowDown } from "react-icons/fi";
+import "./Home.css";
 
-function Home() {
+const Home = () => {
+  return (
+    <section id="home" className="home">
+      {/* Animated Orbs */}
+      <motion.div
+        className="orb orb1"
+        animate={{ y: [0, -30, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="orb orb2"
+        animate={{ y: [0, 30, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
 
+      <div className="content">
+        <motion.p
+          className="intro"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Hello, I'm
+        </motion.p>
 
-    useEffect(() => {
-        const typed = new Typed(".text", {
-            strings: ["Frontend Developer", "Designer", "Web Developer"],
-            typeSpeed: 100,
-            backSpeed: 100,
-            backDelay: 1000,
-            loop: true,
-        });
+        <motion.h1
+          className="name"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          Ejaz Ahmad
+        </motion.h1>
 
-        return () => typed.destroy();
-    }, []);
+        <motion.p
+          className="role"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+        >
+          Frontend Developer
+        </motion.p>
 
-    return (
-        <div className="home">
-            <span className="bg-dot dot1"></span>
-            <span className="bg-dot dot2"></span>
-            <span className="bg-star star1">✦</span>
-            <span className="bg-star star2">✦</span>
+        <motion.p
+          className="description"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+        >
+          Building high-performance interfaces with clean aesthetics, motion depth, and purpose-driven design.
+        </motion.p>
 
-            <div className="home-content">
-                <h3>Hello, It's Me</h3>
-                <h1>Ejaz Ahmad</h1>
-                <h3>And I'm a <span className="text"></span> </h3>
-                <p>I'm a web Designer with extensive experience for over 3 years.</p>
+        <motion.div
+          className="buttons"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+        >
+          <a href="/contact" className="btn primary">Get in Touch</a>
+          <a href="/projects" className="btn secondary">View Projects</a>
+        </motion.div>
 
-                <div className="home-social">
-                    <a href="" style={{ "--i": 7 }}><CiFacebook /></a>
-                    <a href="" style={{ "--i": 8 }}><FaInstagram /></a>
-                    <a href="" style={{ "--i": 9 }}><FaWhatsapp /></a>
-                    {/* <a href="https://www.linkedin.com/in/ejaz-ahmad-1599112b9/" style={{ "--i": 9 }}><CiLinkedin /></a> */}
-                    <a
-                        href="https://www.linkedin.com/in/ejaz-ahmad-1599112b9/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ "--i": 9 }}
-                    >
-                        <CiLinkedin />
-                    </a>
+        <motion.div
+          className="socials"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+        >
+          <a href="https://github.com/ejaz18" target="_blank" rel="noreferrer"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/ejaz-ahmad-74a002298/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+          <a href="https://www.instagram.com/its_ejaj.18/" target="_blank" rel="noreferrer"><FaTwitter /></a>
+          <a href="mailto:ejaj101112@gmail.com"><FaEnvelope /></a>
+        </motion.div>
 
-
-                </div>
-                <a href="#" className="btn-box"> Resume </a>
-            </div>
-        </div>
-    );
-}
+        <motion.a
+          href="/about"
+          className="scroll-down"
+          animate={{ y: [0, 10, 0], opacity: [0.4, 1, 0.4] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <FiArrowDown />
+        </motion.a>
+      </div>
+    </section>
+  );
+};
 
 export default Home;

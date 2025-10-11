@@ -1,36 +1,80 @@
-import React, { useState } from "react";
-import './Nav.css';
-import { FaGithub } from "react-icons/fa6";
+import { useState, useEffect } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import "./Nav.css";
+
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Skills", href: "/skills" },
+  { name: "Projects", href: "/projects" },
+  { name: "Education", href: "/educations" },
+  { name: "Contact", href: "/contact" },
+];
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-  return (
-     <header className="header">
-        <a href="#" className="logo">Ejaz Ahmad</a>
-         <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        <span className={isOpen ? "line open" : "line"}></span>
-        <span className={isOpen ? "line open" : "line"}></span>
-        <span className={isOpen ? "line open" : "line"}></span>
-      </div>
-      
-          <nav className={`navbar ${isOpen ? "active" : ""}`}>
-             <ul>
-    <a href="/" style={{ "--i": 1 }} className="active">Home</a>
-    <a href="/about" style={{ "--i": 2 }}>About</a>
-    <a href="/skills" style={{ "--i": 3 }}>Skills</a>
-    <a href="/projects" style={{ "--i": 4 }}>Projects</a>
-    <a href="/educations" style={{ "--i": 5 }}>Educations</a>
-    <a href="/contacts" style={{ "--i": 6}}>Contacts</a> 
-    </ul>
-     <div className="nav-btn">
-          {/* <  button className="nav-btn">Github</button> */}
-           <a href="https://github.com/Ejaz-Ahmad18" target="_blank" rel="noopener noreferrer" className="git-btn" ><FaGithub/>  Github</a>
-          
-        </div>
-</nav>
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-     </header>
-  )
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <nav className={`nav ${isScrolled ? "nav-scrolled" : ""}`}>
+      <div className="nav-container">
+        <a href="#home" className="nav-logo">Ejaz Ahmad</a>
+
+        <div className="nav-links">
+          {navLinks.map(link => (
+            <a key={link.name} href={link.href} className="nav-link">
+              {link.name}
+            </a>
+          ))}
+        </div>
+
+        <div className="nav-social">
+          <a href="https://github.com/ejaz18" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="nav-icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/ejaz-ahmad-74a002298/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="nav-icon" />
+          </a>
+        </div>
+
+        <button
+          className="mobile-btn"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? "✕" : "☰"}
+        </button>
+      </div>
+
+      {isMobileMenuOpen && (
+        <div className="mobile-menu">
+          {navLinks.map(link => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="mobile-link"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
+          <div className="mobile-social">
+            <a href="https://github.com/ejaz18" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="nav-icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/ejaz-ahmad-74a002298/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="nav-icon" />
+            </a>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
 }
 
 export default Navbar;
