@@ -72,11 +72,8 @@ function Projects (){
                   >
                     <FaExternalLinkAlt /> Demo
                   </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-btn outline-btn"
+                  <a href={project.github}target="_blank"rel="noopener noreferrer" className="project-btn outline-btn"
+                    
                   >
                     <FaGithub /> Code
                   </a>
@@ -98,6 +95,7 @@ function Projects (){
         </div>
       </div>
     </section>
+  
   );
 };
 
