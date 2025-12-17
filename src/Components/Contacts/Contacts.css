@@ -1,7 +1,7 @@
 .contact-section {
   position: relative;
   padding: 100px 0;
-  /* background: radial-gradient(circle at top right, #1a1a2e, #0f0f1a); */
+ background: var(  --bg-gradient);
   color: #fff;
 }
 
@@ -11,7 +11,7 @@
   margin-bottom: 80px;
 }
 
-.section-title {
+/* .section-title {
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -26,7 +26,54 @@
 .section-subtitle {
   color: #a1a1aa;
   font-size: 1.1rem;
+} */
+ .skills-section {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #020617, #020617);
+  position: relative;
+  overflow: hidden;
 }
+
+.contact-title {
+  position: relative;
+  text-align: center;
+}
+
+/* Big faded background text */
+.contact-title .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.04);
+  letter-spacing: 10px;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Main heading */
+.contact-title h2 {
+  position: relative;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #fbbf24; /* golden */
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+/* Underline */
+.contact-title .underline {
+  width: 120px;
+  height: 2px;
+  background: #fbbf24;
+  margin: 12px auto 0;
+}
+
 
 /* Card */
 .contact-card {

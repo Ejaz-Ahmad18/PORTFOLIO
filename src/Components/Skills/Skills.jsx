@@ -33,8 +33,14 @@ function Skills (){
     <section id="skills" className="skills-section">
       <div className="skills-container">
         <div className="skills-header">
-          <h2 className="skills-title">Skills</h2>
-          <p className="skills-subtitle">Technologies I've been working with</p>
+       
+  <div class="skills-title">
+    <span class="bg-text">MY SKILLS</span>
+    <h2>MY SKILLS</h2>
+    <div class="underline"></div>
+  </div>
+
+
         </div>
 
         <div className="skills-grid">

@@ -1,14 +1,15 @@
 .home {
   position: relative;
   min-height: 100vh;
- background: #111;
+  width: 100%;
+background: var(--bg-gradient);
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
-  box-shadow: 0 2px 6px #00000080;
+  /* box-shadow: 0 2px 6px #00000080; */
 }
 
 /* Particles canvas */
@@ -46,12 +47,37 @@
 
 /* Text and layout */
 .content {
-  position: relative;
+  position: absolute;
+  left: 5%;
   z-index: 5;
   max-width: 850px;
   padding: 0 20px;
-}
 
+}
+.profile{
+  margin-left: 45%;
+  height: 450px;
+  width: 450px;
+  overflow: hidden;
+    /* border-radius: 50% !important; */
+background-color: #0f172a;
+  border-radius: 10px;
+    box-shadow: 0 0 20px #111;
+    transition: all 0.3s linear;
+     position: relative;   /* ✅ */
+  z-index: 10;          /* ✅ VERY IMPORTANT */
+}
+img{
+  height: 430px;
+  width: 430px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.profile:hover{
+  box-shadow: 0 10px 15px #00000080;
+  transform: scale(1.05) translateY(-3px);
+}
 .intro {
   font-size: 1.8rem;
   color: #bbb;
@@ -172,6 +198,8 @@ transition: all 0.3s linear;
 
 /* Scroll arrow */
 .scroll-down {
+  position: absolute;
+  left: 100%;
   display: inline-block;
   margin-top: 3rem;
   font-size: 1.6rem;
@@ -179,13 +207,53 @@ transition: all 0.3s linear;
 }
 
 
- @media (max-width:435px) {
-  .content{
-    margin-top:30%;
+@media (max-width: 1023px) {
+
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+  }
+
+  .content {
+    position: relative;
+    left: 0;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .profile {
+    margin-left: 0 !important;
+    margin-top: 3rem;
+    width: 320px;
+    height: 320px;
+  }
+
+  .profile img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .scroll-down {
+    position: relative;
+    left: 0;
+    margin-top: 2rem;
   }
 }
- @media (max-width:385px) {
-  .content{
-    margin-top: 30%;
+
+/* mobile hover */
+.profile {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .profile:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 10px 15px #00000080;
   }
+}
+
+.profile:active {
+  transform: scale(0.97);
 }

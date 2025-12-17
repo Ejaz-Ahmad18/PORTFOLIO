@@ -1,7 +1,7 @@
 .education-section {
   position: relative;
   padding: 6rem 1rem;
-  /* background: radial-gradient(circle at top left, #2a0a3d, #100018 70%); */
+  background:linear-gradient(135deg, #020617, #0f172a);
   color: #fff;
   overflow: hidden;
 }

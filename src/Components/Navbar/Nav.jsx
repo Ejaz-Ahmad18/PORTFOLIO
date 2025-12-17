@@ -35,12 +35,12 @@ function Navbar() {
         </div>
 
         <div className="nav-social">
-          <a href="https://github.com/ejaz18" target="_blank" rel="noopener noreferrer">
+          <p> <a href="https://github.com/ejaz18" target="_blank" rel="noopener noreferrer">
             <FaGithub className="nav-icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/ejaz-ahmad-74a002298/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="nav-icon" />
-          </a>
+          </a></p>
+          <p>Github</p>
+         
+         
         </div>
 
         <button

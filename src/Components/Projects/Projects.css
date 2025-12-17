@@ -1,7 +1,7 @@
 .projects-section {
   padding: 6rem 1rem;
   position: relative;
-   /* background: radial-gradient(circle at top left, #2a0a3d, #100018 70%); */
+background: var(  --bg-gradient);
   overflow: hidden;
 }
 
@@ -15,7 +15,7 @@
   margin-bottom: 4rem;
 }
 
-.projects-title {
+/* .projects-title {
   font-size: 3rem;
   font-weight: 700;
   background: linear-gradient(90deg, #a855f7, #8d6779);
@@ -26,7 +26,53 @@
 .projects-subtitle {
   color: #555;
   font-size: 1.1rem;
+} */.projectd-section {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #020617, #020617);
+  position: relative;
+  overflow: hidden;
 }
+
+.project-title {
+  position: relative;
+  text-align: center;
+}
+
+/* Big faded background text */
+.project-title .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.04);
+  letter-spacing: 10px;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Main heading */
+.project-title h2 {
+  position: relative;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #fbbf24; /* golden */
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+/* Underline */
+.project-title .underline {
+  width: 120px;
+  height: 2px;
+  background: #fbbf24;
+  margin: 12px auto 0;
+}
+
 
 .projects-grid {
   display: grid;

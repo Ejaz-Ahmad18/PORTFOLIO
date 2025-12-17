@@ -1,7 +1,14 @@
 .skills-section {
   padding: 100px 20px;
-  /* background: radial-gradient(circle at top left, #1a002b, #0a001a 70%); */
+background: var(  --bg-gradient);
   color: #fff;
+  min-height: 200px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background: linear-gradient(to right, #020617, #020617);
+  position: relative;
+  overflow: hidden;
 }
 
 .skills-container {
@@ -14,7 +21,7 @@
   margin-bottom: 60px;
 }
 
-.skills-title {
+/* .skills-title {
   font-size: 3rem;
   font-weight: 700;
   background: linear-gradient(90deg, #a855f7, #8d6779);
@@ -25,7 +32,47 @@
 .skills-subtitle {
   color: #bbb;
   font-size: 1.1rem;
+} */.skills-header {
+  
 }
+
+.skills-title {
+  position: relative;
+  text-align: center;
+}
+
+/* Big faded background text */
+.skills-title .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.04);
+  letter-spacing: 10px;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Main heading */
+.skills-title h2 {
+  position: relative;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #fbbf24; /* golden */
+  letter-spacing: 2px;
+  z-index: 2;
+}
+
+/* Underline */
+.skills-title .underline {
+  width: 120px;
+  height: 2px;
+  background: #fbbf24;
+  margin: 12px auto 0;
+}
+
 
 .skills-grid {
   display: grid;

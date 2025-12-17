@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaInstagram } from "react-icons/fa";
 import { FiArrowDown } from "react-icons/fi";
 import "./Home.css";
 import Typed from "typed.js";
@@ -85,16 +85,16 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <a href="https://github.com/ejaz18" target="_blank" rel="noreferrer">
-            <FaGithub />
-          </a>
-          <a href="https://www.linkedin.com/in/ejaz-ahmad-74a002298/" target="_blank" rel="noreferrer">
+           <a href="https://www.linkedin.com/in/ejaz-ahmad-74a002298/" target="_blank" rel="noreferrer">
             <FaLinkedin />
           </a>
-          <a href="https://www.instagram.com/its_ejaj.18/" target="_blank" rel="noreferrer">
+          <a href="https://github.com/ejaz18" target="_blank" rel="noreferrer">
+            <FaInstagram />
+          </a>
+          <a href="https://www.twiter.com/its_ejaj.18/" target="_blank" rel="noreferrer">
             <FaTwitter />
           </a>
-          <a href="mailto:ejaj101112@gmail.com">
+          <a href="mailto:ejazahmadbh18@gmail.com">
             <FaEnvelope />
           </a>
         </motion.div>
@@ -107,6 +107,9 @@ const Home = () => {
         >
           <FiArrowDown />
         </motion.a>
+      </div>
+      <div className="profile">
+        <img src="https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
       </div>
     </section>
   );

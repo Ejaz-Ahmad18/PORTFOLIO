@@ -24,10 +24,14 @@ const About = () => {
   return (
     <section id="about" className="about-section">
       <div className="about-container">
-        <div className="about-header">
-          <h2 className="about-title">About Me</h2>
-          <p className="about-subtitle">Get to know me better</p>
-        </div>
+          <div className="skills-header">
+       
+  <div class="skills-title">
+    <span class="bg-text">ABOUTS ME</span>
+    <h2>ABOUT ME</h2>
+    <div class="underline"></div>
+  </div>
+  </div>
 
         <div className="about-content">
           <div className="about-image-container">

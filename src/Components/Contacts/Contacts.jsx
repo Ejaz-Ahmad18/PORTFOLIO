@@ -45,10 +45,14 @@ function Contact () {
   return (
     <section id="contact" className="contact-section">
       <div className="container">
-        <div className="section-header">
-          <h2 className="section-title gradient-text">Get in Touch</h2>
-          <p className="section-subtitle">Let's work together on your next project</p>
-        </div>
+           <div className="contact-header">
+       
+  <div class="contact-title">
+    <span class="bg-text">CONTACTS</span>
+    <h2>GET IN TOUCH</h2>
+    <div class="underline"></div>
+  </div>
+  </div>
 
         <div className="contact-card">
           <div className="contact-info">
