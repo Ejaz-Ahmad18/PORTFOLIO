@@ -1,6 +1,6 @@
 .skills-section {
   padding: 100px 20px;
-  background: radial-gradient(circle at top left, #1a002b, #0a001a 70%);
+  /* background: radial-gradient(circle at top left, #1a002b, #0a001a 70%); */
   color: #fff;
 }
 
@@ -108,9 +108,19 @@
     width: var(--bar-width);
   }
 }
+@media (max-width:435px) {
+  .skills-card{
+    max-width: 380px;
+  }
+}
 
-@media (max-width:380px) {
+@media (max-width:385px) {
   .skills-card{
     max-width: 330px;
+  }
+}
+@media (max-width:320px) {
+  .skills-card{
+    max-width: 285px;
   }
 }

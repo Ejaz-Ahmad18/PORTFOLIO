@@ -1,7 +1,7 @@
 .projects-section {
   padding: 6rem 1rem;
   position: relative;
-   background: radial-gradient(circle at top left, #2a0a3d, #100018 70%);
+   /* background: radial-gradient(circle at top left, #2a0a3d, #100018 70%); */
   overflow: hidden;
 }
 
@@ -149,11 +149,16 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .projects-title {
     font-size: 2.2rem;
   }
   .project-image {
     height: 200px;
+  }
+} */
+ @media (max-width:335px) {
+  .project-card{
+    width: 90%;
   }
 }

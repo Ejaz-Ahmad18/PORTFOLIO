@@ -24,7 +24,7 @@ function Navbar() {
   return (
     <nav className={`nav ${isScrolled ? "nav-scrolled" : ""}`}>
       <div className="nav-container">
-        <a href="#home" className="nav-logo">Ejaz Ahmad</a>
+        <a href="#home" className="nav-logo">Ejaz <span className="spn">Ahmad</span> </a>
 
         <div className="nav-links">
           {navLinks.map(link => (

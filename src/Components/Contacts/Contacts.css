@@ -1,7 +1,7 @@
 .contact-section {
   position: relative;
   padding: 100px 0;
-  background: radial-gradient(circle at top right, #1a1a2e, #0f0f1a);
+  /* background: radial-gradient(circle at top right, #1a1a2e, #0f0f1a); */
   color: #fff;
 }
 

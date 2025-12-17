@@ -1,13 +1,15 @@
 .about-section {
   padding: 6rem 1rem;
-  background: radial-gradient(circle at top, #0a0b1e, #020311);
+  
   color: #fff;
   overflow: hidden;
+ 
 }
 
 .about-container {
   max-width: 1100px;
   margin: 0 auto;
+ 
 }
 
 /* Header */
