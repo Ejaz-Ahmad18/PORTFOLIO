@@ -1,71 +1,60 @@
 import React from "react";
 import "./About.css";
-import { FaCode, FaPalette, FaBolt } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 
 const About = () => {
-  const features = [
-    {
-      icon: <FaCode />,
-      title: "Clean Code",
-      description: "Writing maintainable and efficient code following best practices.",
-    },
-    {
-      icon: <FaPalette />,
-      title: "Pixel Perfect",
-      description: "Creating visually stunning interfaces with attention to detail.",
-    },
-    {
-      icon: <FaBolt />,
-      title: "Performance",
-      description: "Building fast and responsive applications for optimal UX.",
-    },
-  ];
-
   return (
-    <section id="about" className="about-section">
-      <div className="about-container">
-          <div className="skills-header">
-       
-  <div class="skills-title">
-    <span class="bg-text">ABOUTS ME</span>
-    <h2>ABOUT ME</h2>
-    <div class="underline"></div>
-  </div>
-  </div>
+    <section className="about-section">
+      {/* Section Heading */}
+      <div className="about-heading">
+        <span className="bg-text">ABOUT ME</span>
+        <h2>ABOUT ME</h2>
+        <div className="underline"></div>
+      </div>
 
-        <div className="about-content">
-          <div className="about-image-container">
-            <div className="image-glow"></div>
+      {/* Card */}
+      <div className="about-card">
+        {/* Left Image */}
+        <div className="about-left">
+          <div className="image-wrapper">
+            <div className="circle-bg"></div>
             <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=1000&fit=crop"
-              alt="Ejaz Ahmad"
-              className="about-image"
+              src="https://images.unsplash.com/photo-1615109398623-88346a601842"
+              alt="profile"
             />
           </div>
 
-          <div className="about-text">
-            <h3>Hi, I'm Ejaz Ahmad</h3>
-            <p>
-              I'm a passionate Frontend Developer specializing in React and React Native.
-              With over 3 years of experience, I create seamless digital experiences that
-              combine beautiful design with clean, efficient code.
-            </p>
-            <p>
-              My focus is on building intuitive, responsive, and visually engaging interfaces
-              that bring designs to life with precision. I combine technical skills with creativity
-              to ensure every interaction feels smooth and every pixel is perfectly placed.
-            </p>
+          <div className="social-pill">
+            <a href="#"><FaLinkedinIn /></a>
+            <a href="#"><FaGithub /></a>
+            <a href="#"><FaTwitter /></a>
           </div>
         </div>
 
-        <div className="features">
-          {features.map((feature, index) => (
-            <div className="feature-card" key={index}>
-              <div className="feature-icon">{feature.icon}</div>
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
-            </div>
-          ))}
+        {/* Right Content */}
+        <div className="about-right">
+          <h3>About Me</h3>
+          <p className="intro">
+            I'm Ejaz Ahmad, a passionate web developer crafting modern and
+            responsive websites.
+          </p>
+
+          <p>
+            I specialize in React, JavaScript, and frontend development.
+            Through academic learning and hands-on experience, I’ve developed
+            the skills to build clean, scalable, and user-focused applications.
+          </p>
+
+          <p>
+            For me, development is about blending creativity and precision to
+            deliver solutions that are not only functional but also visually
+            stunning.
+          </p>
+
+          <div className="about-buttons">
+            <button className="btn outline">Read More</button>
+            <button className="btn filled">Download CV</button>
+          </div>
         </div>
       </div>
     </section>
