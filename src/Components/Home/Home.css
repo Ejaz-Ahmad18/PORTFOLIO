@@ -64,7 +64,7 @@
   background: linear-gradient(90deg, #dadada, #ff9800);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* text-shadow: 0 0 30px #ff9800; */
+  text-shadow: 0 0 30px #ff9800;
   animation: glow 4s ease-in-out infinite alternate;
 }
 
@@ -75,8 +75,19 @@
 
 .role {
   font-size: 1.8rem;
-  color: #ddd;
+  color: #ff9800;
   margin-top: 0.4rem;
+   display: inline;
+}
+/* Cursor fix */
+.typed-cursor {
+  display: inline;
+  margin-left: 4px;
+  font-size: 1.8rem;
+  line-height: 1;
+  vertical-align: baseline;
+  color: #ff9800;
+  animation: blink 0.7s infinite;
 }
 
 .description {
