@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { FiArrowDown } from "react-icons/fi";
 import "./Home.css";
+import Typed from "typed.js";
 
 const Home = () => {
+
+  useEffect(() => {
+    const typed = new Typed(".text", {
+      strings: ["Frontend Developer", "Designer", "Web Developer"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1000,
+      loop: true,
+    });
+
+    return () => typed.destroy();
+  }, []);
+
   return (
     <section id="home" className="home">
       {/* Animated Orbs */}
@@ -38,14 +52,13 @@ const Home = () => {
           Ejaz Ahmad
         </motion.h1>
 
+        {/* Typed.js target */}
         <motion.p
-          className="role"
+          className="role text"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-        >
-          Frontend Developer
-        </motion.p>
+        ></motion.p>
 
         <motion.p
           className="description"
@@ -62,8 +75,8 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
         >
-          <a href="/contact" className="btn primary">Get in Touch</a>
-          <a href="/projects" className="btn secondary">View Projects</a>
+          <a href="#" className="btn primary">Download CV</a>
+          <a href="/contact" className="btn secondary">Contact Me</a>
         </motion.div>
 
         <motion.div
@@ -72,10 +85,18 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <a href="https://github.com/ejaz18" target="_blank" rel="noreferrer"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/ejaz-ahmad-74a002298/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-          <a href="https://www.instagram.com/its_ejaj.18/" target="_blank" rel="noreferrer"><FaTwitter /></a>
-          <a href="mailto:ejaj101112@gmail.com"><FaEnvelope /></a>
+          <a href="https://github.com/ejaz18" target="_blank" rel="noreferrer">
+            <FaGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/ejaz-ahmad-74a002298/" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://www.instagram.com/its_ejaj.18/" target="_blank" rel="noreferrer">
+            <FaTwitter />
+          </a>
+          <a href="mailto:ejaj101112@gmail.com">
+            <FaEnvelope />
+          </a>
         </motion.div>
 
         <motion.a
