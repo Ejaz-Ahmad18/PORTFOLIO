@@ -49,15 +49,15 @@ function Projects (){
   return (
     <section id="projects" className="projects-section">
       <div className="projects-container">
-            <div className="project-header">
+     
+       <div className="projects-header">
        
-  <div class="project-title">
-    <span class="bg-text">My PROJECTS</span>
-    <h2>MY PROJECTS</h2>
+  <div class="projects-title">
+    <span class="bg-text">MYPROJECTS</span>
+    <h2>PROJECTS</h2>
     <div class="underline"></div>
   </div>
   </div>
-
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div key={index} className="project-card">

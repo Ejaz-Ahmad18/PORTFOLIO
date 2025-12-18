@@ -89,15 +89,16 @@
   color: white;
   /* background-color: #fc9928; */
     border: 2px solid #ff9800;
-  transition: all 0.3s linear;
+  transition: all 0.3s ease;
    box-shadow: 0 0 10px #ff9800;
+     background: transparent;
 }
 
 .nav-icon {
   font-size: 1.4rem;
   color: #fff;
   
-  background: transparent;
+
 }
 
 .nav-social:hover {

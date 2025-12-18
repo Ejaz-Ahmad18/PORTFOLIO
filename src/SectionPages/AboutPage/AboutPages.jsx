@@ -3,9 +3,12 @@ import Navbar from '../../Components/Navbar/Nav'
 import About from '../../Components/About/About'
 import Skills from '../../Components/Skills/Skills'
 import Projects from '../../Components/Projects/Projects'
-import Educations from '../../Components/Educations/Educations'
 import Contacts from '../../Components/Contacts/Contacts'
 import Footer from '../../Components/Footer/Footer'
+import Education from '../../Components/Educations/Educations'
+
+
+
 
 const AboutPages = () => {
   return (
@@ -14,7 +17,7 @@ const AboutPages = () => {
      <About/>
     <Skills/>
    <Projects/>
-    <Educations/>
+    <Education/>
     <Contacts/>
     <Footer/>
     
