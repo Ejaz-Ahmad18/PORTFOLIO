@@ -137,6 +137,9 @@
   .edu-item.right {
     left: 0;
   }
+  .edu-item.right .edu-dot {
+  left:10px;
+}
 
   .edu-dot {
     left: 11px;
