@@ -99,7 +99,12 @@ const Home = () => {
           </a>
         </motion.div>
 
-        <motion.a
+       
+      </div>
+      <div className="profile">
+        <img src="https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+      </div>
+ <motion.a
           href="/about"
           className="scroll-down"
           animate={{ y: [0, 10, 0], opacity: [0.4, 1, 0.4] }}
@@ -107,10 +112,9 @@ const Home = () => {
         >
           <FiArrowDown />
         </motion.a>
-      </div>
-      <div className="profile">
-        <img src="https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-      </div>
+
+
+
     </section>
   );
 };

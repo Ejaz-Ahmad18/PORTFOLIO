@@ -256,3 +256,67 @@ transition: all 0.3s linear;
     font-size: 1.8rem;
   }
 }
+@media (max-width: 1023px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7rem;
+  }
+
+  .content { order: 1; }
+  .profile { order: 2; margin: 2rem 0; }
+  .scroll-down {
+    order: 3;
+    position: relative;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+}
+/* ================= LAPTOP & DESKTOP FIX ================= */
+@media (min-width: 1024px) {
+
+  .scroll-down {
+    left: 50% !important;
+    bottom: 2.5rem !important;
+    top: auto !important;
+    transform: translateX(-50%) !important;
+    z-index: 20;
+  }
+}
+
+
+/* ================= MOBILE / TABLET FIX ================= */
+@media (max-width: 1023px) {
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7rem;
+    text-align: center;
+  }
+
+  .content {
+    position: relative !important;
+    left: 0 !important;
+    order: 1;
+    margin-bottom: 2.5rem;
+  }
+
+  .profile {
+    position: relative;
+    order: 2;
+    margin: 2rem 0 1.5rem;
+  }
+
+  /* 🔥 PROFILE KE NICHE ARROW */
+  .scroll-down {
+    position: relative !important;
+    left: 0 !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    order: 3;
+    margin-top: 1rem;
+  }
+}
