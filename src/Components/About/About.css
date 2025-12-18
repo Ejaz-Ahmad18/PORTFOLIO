@@ -179,7 +179,7 @@ position: absolute;
 
 
 /* ===== Responsive ===== */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .about-card {
     flex-direction: column;
     text-align: center;
@@ -202,5 +202,51 @@ position: absolute;
   .image-wrapper {
     width: 220px;
     height: 220px;
+  }
+} */
+@media (max-width: 900px) {
+
+  .about-card {
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+  }
+
+  /* ================= PROFILE BOX ================= */
+  .about-left {
+    width: 100%;
+    padding: 1.2rem 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  .image-wrapper {
+    border: none;
+    box-shadow: none;
+  }
+
+  .circle-bg {
+    display: none;
+  }
+
+  /* Profile + Social ek hi block jaisa feel */
+  .social-pill {
+    margin-top: 1rem;
+  }
+
+  /* ================= CONTENT BOX ================= */
+  .about-right {
+    width: 100%;
+    padding: 1.5rem 1.2rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+  }
+
+  .about-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
