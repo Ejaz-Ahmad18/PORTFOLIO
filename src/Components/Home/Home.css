@@ -207,54 +207,52 @@ transition: all 0.3s linear;
   color: #ff9800;
 }
 
+.profile:active {
+  transform: scale(0.97);
+}
+
+/* media */
 
 @media (max-width: 1023px) {
 
   .home {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-top: 6rem;
+    padding-top: 7rem;   /* nav overlap fix */
+    text-align: center;
   }
 
+  /* ===== TEXT CONTENT ===== */
   .content {
     position: relative;
+    order: 1;
     left: 0;
-    text-align: center;
     max-width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 2.5rem;
   }
 
+  /* ===== PROFILE ===== */
   .profile {
-    margin-left: 0 !important;
-    margin-top: 3rem;
-    width: 320px;
-    height: 320px;
-  }
-
-  .profile img {
+    position: relative;
+    order: 2;
+    margin: 0 0 1.5rem;
     width: 300px;
     height: 300px;
   }
 
+  .profile img {
+    width: 280px;
+    height: 280px;
+  }
+
+  /* ===== SCROLL ICON (PROFILE KE NICHE) ===== */
   .scroll-down {
     position: relative;
+    order: 3;
     left: 0;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
   }
-}
-
-/* mobile hover */
-.profile {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .profile:hover {
-    transform: scale(1.05) translateY(-3px);
-    box-shadow: 0 10px 15px #00000080;
-  }
-}
-
-.profile:active {
-  transform: scale(0.97);
 }
