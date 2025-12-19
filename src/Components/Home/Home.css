@@ -148,6 +148,10 @@ img{
    transition: all 0.3s linear;
   background: linear-gradient(90deg, #ff9800, #ff9800);
 }
+.primary .pdf{
+font-size: 20px;
+margin-right: 5px;
+}
 
 .btn.primary:hover {
   transform: scale(1.05) translateY(-3px);
