@@ -148,6 +148,19 @@
   left:10px;
 }
 
+
+}
+@media(max-width:435px){
+  .edu-item.right .edu-dot {
+  left:10px;
+}
+}
+@media(max-width:778px){
+  .edu-item.right .edu-dot {
+  left:10px;
+}
+
+
 }
 .education-header {
   position: relative;

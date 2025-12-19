@@ -320,3 +320,14 @@ transition: all 0.3s linear;
     margin-top: 1rem;
   }
 }
+@media(max-width:1034px){
+  
+
+.content {
+    position: absolute;
+    left: 1%;
+    z-index: 5;
+    max-width: 500px;
+    padding: 0 20px;
+}
+}

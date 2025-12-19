@@ -222,10 +222,18 @@ position: absolute;
   }
 
   .image-wrapper {
-    border: none;
+    border: none; 
     box-shadow: none;
   }
-
+.image-wrapper img {
+    position: relative;
+    width: 85%;
+    height: 85%;
+    margin-left: 1.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 1;
+}
   .circle-bg {
     display: none;
   }
