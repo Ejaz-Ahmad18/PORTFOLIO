@@ -95,7 +95,7 @@
 
 .skill-icon {
   font-size: 1.2rem;
-  color: #fbbf24;
+  color: #ff8900;
 }
 
 .skill-name {
@@ -118,7 +118,7 @@
 
 .skill-fill {
   height: 100%;
-  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  background: linear-gradient(90deg, #ff8900, #ff8900);
   border-radius: 6px;
   transition: width 1.2s ease;
 }
