@@ -37,10 +37,18 @@ const Contact = () => {
           </div>
 
           <div className="contact-socials">
-            <a href="#"><FaLinkedin /></a>
-            <a href="#"><FaGithub /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaTwitter /></a>
+ <a href="https://www.linkedin.com/in/ejaz-ahmad18/" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://www.instagram.com/authenticejaz/" target="_blank" rel="noreferrer">
+            <FaInstagram />
+          </a>
+          <a href="https://x.com/iamejaz" target="_blank" rel="noreferrer">
+            <FaTwitter />
+          </a>
+          <a href="mailto:ejazahmadbh18@gmail.com" target="_blank" rel="noreferrer">
+            <FaEnvelope />
+          </a>
           </div>
         </div>
 

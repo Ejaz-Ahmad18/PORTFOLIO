@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaRegFilePdf } from "react-icons/fa6";
 
 const About = () => {
   return (
@@ -25,9 +26,12 @@ const About = () => {
           </div>
 
           <div className="social-pill">
-            <a href="#"><FaLinkedinIn /></a>
-            <a href="#"><FaGithub /></a>
-            <a href="#"><FaTwitter /></a>
+            <a href="https://www.linkedin.com/in/ejaz-ahmad18/"target="_blank"
+  rel="noopener noreferrer"><FaLinkedinIn /></a>
+            <a href="https://github.com/ejaz-ahmad18"target="_blank"
+  rel="noopener noreferrer"><FaGithub /></a>
+            <a href="https://x.com/iamejaz"target="_blank"
+  rel="noopener noreferrer"><FaTwitter /></a>
           </div>
         </div>
 
@@ -53,7 +57,16 @@ const About = () => {
 
           <div className="about-buttons">
             <button className="btn outline">Read More</button>
-            <button className="btn filled">Download CV</button>
+<a
+  href="/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn outline"
+>
+  <FaRegFilePdf className="pdf" />
+  <span>Download CV</span>
+</a>
+
           </div>
         </div>
       </div>

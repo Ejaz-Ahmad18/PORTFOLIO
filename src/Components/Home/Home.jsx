@@ -76,7 +76,7 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
         >
-          <a href="/resume.pdf"  target="_blank"
+          <a href="resume.pdf"  target="_blank"
   rel="noopener noreferrer" className="btn primary">
     <FaRegFilePdf className="pdf"/>
     <span>Download CV</span>

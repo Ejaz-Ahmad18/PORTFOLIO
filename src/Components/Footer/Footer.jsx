@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { FaLinkedinIn, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaInstagram, FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -16,10 +16,18 @@ const Footer = () => {
           </p>
 
           <div className="footer-socials">
-            <a href="#"><FaLinkedinIn /></a>
-            <a href="#"><FaGithub /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaTwitter /></a>
+            <a href="https://www.linkedin.com/in/ejaz-ahmad18/" target="_blank" rel="noreferrer">
+                       <FaLinkedin />
+                     </a>
+                     <a href="https://www.instagram.com/authenticejaz/" target="_blank" rel="noreferrer">
+                       <FaInstagram />
+                     </a>
+                     <a href="https://x.com/iamejaz" target="_blank" rel="noreferrer">
+                       <FaTwitter />
+                     </a>
+                     <a href="mailto:ejazahmadbh18@gmail.com" target="_blank" rel="noreferrer">
+                       <FaEnvelope />
+                     </a>
           </div>
         </div>
 
@@ -29,7 +37,7 @@ const Footer = () => {
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>

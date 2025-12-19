@@ -16,25 +16,25 @@
   width: 100%;
   background: #020617;
   overflow: hidden;
-  padding-top: 90px;
+  /* padding-top: 90px; */
 }
 
 /* ===== SINGLE CURVED EDGE ===== */
 .footer::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 160px;
-
-  background: #020617;
+  height: 80%;
+/* background-color: #fbbf24; */
+  background: #01030c;
 
   /* ✅ ONE SMOOTH CURVE ONLY */
   clip-path: ellipse(120% 100% at 50% 0%);
 
   /* subtle shadow for depth */
-  box-shadow: inset 0 -90px 80px rgba(2, 1, 25, 0.8);
+  box-shadow: inset 0 -70px 100px rgba(3, 2, 27, 0.8);
 
   z-index: 1;
 }
