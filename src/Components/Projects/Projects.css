@@ -88,7 +88,7 @@
   overflow: hidden;
   padding: 0;
   background: #020617; /* 🔥 gap illusion fix */
-
+  margin-top: -10px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
