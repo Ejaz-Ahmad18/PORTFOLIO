@@ -88,16 +88,16 @@ background: var(--bg-gradient);
 .name {
   font-size: 4.5rem;
   font-weight: 400;
-  background: linear-gradient(90deg, #dadada, #ff9800);
+  background: linear-gradient(90deg, #ff9800 , #ff9800);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 30px #ff9800;
+  /* text-shadow: 0 0 30px #ff9800; */
   animation: glow 4s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 1px #ff9800; }
-  to { text-shadow: 0 0 15px #ff9800 ; }
+  from { text-shadow: 0 0 0 #ff9800; }
+  to { text-shadow: 0 0 5px #ff9800 ; }
 }
 
 .role {
