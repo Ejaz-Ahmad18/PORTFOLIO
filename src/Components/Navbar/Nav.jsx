@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom"; 
 import "./Nav.css";
 
 const navLinks = [
@@ -24,28 +25,32 @@ function Navbar() {
   return (
     <nav className={`nav ${isScrolled ? "nav-scrolled" : ""}`}>
       <div className="nav-container">
-        <a href="#home" className="nav-logo">Ejaz <span className="spn">Ahmad</span> </a>
+
+        
+        <Link to="/" className="nav-logo">
+          Ejaz <span className="spn">Ahmad</span>
+        </Link>
 
         <div className="nav-links">
           {navLinks.map(link => (
-            <a key={link.name} href={link.href} className="nav-link">
+           
+            <Link key={link.name} to={link.href} className="nav-link">
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
 
+        {/* ✅ External link → a tag is CORRECT */}
         <div className="nav-social">
           <a
-  href="https://github.com/ejaz-ahmad18"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="nav-social"
->
-  <p>
-    <FaGithub className="nav-icon" />
-  </p>
-  <p className="git">Github</p>
-</a> 
+            href="https://github.com/ejaz-ahmad18"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-social"
+          >
+            <p><FaGithub className="nav-icon" /></p>
+            <p className="git">Github</p>
+          </a>
         </div>
 
         <button
@@ -59,15 +64,18 @@ function Navbar() {
       {isMobileMenuOpen && (
         <div className="mobile-menu">
           {navLinks.map(link => (
-            <a
+           
+            <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               className="mobile-link"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
+
+       
           <div className="mobile-social">
             <a href="https://github.com/ejaz18" target="_blank" rel="noopener noreferrer">
               <FaGithub className="nav-icon" />
