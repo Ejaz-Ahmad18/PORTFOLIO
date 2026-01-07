@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 import { FaRegFilePdf } from "react-icons/fa6";
-
+import Profile from "../../assets/Profile.jpeg";
 const About = () => {
   return (
     <section className="about-section">
@@ -19,10 +19,7 @@ const About = () => {
         <div className="about-left">
           <div className="image-wrapper">
             <div className="circle-bg"></div>
-            <img
-              src="https://images.unsplash.com/photo-1615109398623-88346a601842"
-              alt="profile"
-            />
+            <img src={Profile} alt="Front view image" />
           </div>
 
           <div className="social-pill">

@@ -5,6 +5,10 @@ import { FiArrowDown } from "react-icons/fi";
 import "./Home.css";
 import Typed from "typed.js";
 import { FaRegFilePdf } from "react-icons/fa6";
+import Profile from "../../assets/Profile.jpeg";
+
+
+
 
 const Home = () => {
 
@@ -107,7 +111,8 @@ const Home = () => {
        
       </div>
       <div className="profile">
-        <img src="./assets/profile.jpeg" alt="" />
+        <img src={Profile} alt="Front view image" />
+
       </div>
  <motion.a
           href="/about"

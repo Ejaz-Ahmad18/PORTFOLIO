@@ -68,7 +68,7 @@ background: var(--bg-gradient);
      position: relative;   /* ✅ */
   z-index: 10;          /* ✅ VERY IMPORTANT */
 }
-img{
+ img{
   height: 430px;
   width: 430px;
   object-fit: cover;
